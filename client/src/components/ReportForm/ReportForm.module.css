@@ -1,0 +1,95 @@
+.formContainer {
+  margin: 0 9.5rem;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.formTitle {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 sütunlu grid yapısı */
+  gap: 10px;
+}
+
+.formLabel {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.formInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 6px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.formInput:focus {
+  border-color: #5a67d8;
+  outline: none;
+}
+
+.formTextarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.formTextarea:focus {
+  border-color: #5a67d8;
+  outline: none;
+}
+
+.formButton {
+  margin-top: 2.4rem;
+  margin-left: 1rem;
+  background-color: #5a67d8;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.formButton:hover {
+  background-color: #4c51bf;
+}
+
+.formError {
+  color: #e53e3e;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.imageUpload {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px dashed #bbb;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.imageUpload:hover {
+  border-color: #5a67d8;
+}
