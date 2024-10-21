@@ -67,6 +67,7 @@ const registerUser = (req, res) => __awaiter(void 0, void 0, void 0, function* (
         res.status(201).json({ message: "Kullanıcı oluşturuldu", newUser });
     }
     catch (error) {
+        console.error(error);
         res.status(500).json({ message: error.message });
     }
 });

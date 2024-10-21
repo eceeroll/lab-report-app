@@ -67,6 +67,7 @@ export const registerUser = async (req: Request, res: Response) => {
 
     res.status(201).json({ message: "Kullanıcı oluşturuldu", newUser });
   } catch (error: any) {
+    console.error(error);
     res.status(500).json({ message: (error as Error).message });
   }
 };
@@ -80,7 +81,7 @@ export const loginUser = (req: Request, res: Response, next: NextFunction) => {
       if (!user)
         return res
           .status(401)
-          .json({ message: info.message || "Giriş Başarısız" });
+          .json({ message: info.message || "Could not login" });
 
       try {
         // generate token
@@ -98,7 +99,9 @@ export const loginUser = (req: Request, res: Response, next: NextFunction) => {
           process.env.JWT_SECRET!,
           { expiresIn: "72h" }
         );
-        return res.status(200).json({ message: "Giriş Başarılı", token, user });
+        return res
+          .status(200)
+          .json({ message: "Could not login", token, user });
       } catch (error) {
         return next(error);
       }
